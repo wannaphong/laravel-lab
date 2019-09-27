@@ -9,7 +9,9 @@ class Members extends Model
 {
     protected $table = 'members';
     public static function getList(){
-        return DB::table('members')->get();
+        return DB::table('members')
+        ->where('year',59)
+        ->get();
         //return 2;
     }
 }
