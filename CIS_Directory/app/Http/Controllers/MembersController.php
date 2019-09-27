@@ -15,4 +15,10 @@ class MembersController extends Controller
        //dd($member);
        return view('show',['members'=>$member]);
     }
+    public function getWomen(){
+        /// dd('ok');
+       $member = member::WhWomen();
+       //dd($member);
+       return view('show',['members'=>$member]);
+    }
 }

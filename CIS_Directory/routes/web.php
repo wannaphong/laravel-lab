@@ -20,3 +20,4 @@ Route::get('welcome', function () {
 });
 
 Route::get('getmember', 'MembersController@getList');
+Route::get('getWomen', 'MembersController@getWomen');
