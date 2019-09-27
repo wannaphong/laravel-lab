@@ -1,0 +1,6 @@
+laravel new CIS_Directory
+cd CIS_Directory
+php artisan make:model Members
+php artisan make:migration create_members_table
+php artisan migrate
+php artisan make:Controller MembersController
