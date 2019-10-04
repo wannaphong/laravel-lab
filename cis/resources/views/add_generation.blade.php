@@ -19,10 +19,10 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="first_name" class="col-md-4">ปี</label>
+                                <label for="year" class="col-md-4">ปี</label>
 
                                 <div class="col-md-12">
-                                    <input id="name" type="text" class="form-control" name="first_name" value="" required autofocus>
+                                    <input id="year" type="text" class="form-control" name="year" value="" required autofocus>
 
                                 </div>
                             </div>
@@ -30,10 +30,10 @@
 
                         <div class="col-md-6">
                             <div class="form-group ">
-                                <label for="last_name" class="col-md-4">จำนวนนักศึกษา</label>
+                                <label for="gen_count" class="col-md-4">จำนวนนักศึกษา</label>
 
                                 <div class="col-md-12">
-                                    <input id="last_name" type="text" class="form-control" name="last_name" value="" required autofocus>
+                                    <input id="gen_count" type="text" class="form-control" name="gen_count" value="" required autofocus>
 
                                 </div>
                             </div>
