@@ -11,7 +11,8 @@ class membersController extends Controller
     public function getMember(){
         //dd("ok");
         $member_all = member::getAll();
-        //$date
-        dd($member_all);
+        $data=array('member'=>$member_all);
+        return view('member',$data);
+        //dd($member_all);
     }
 }
