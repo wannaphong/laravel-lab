@@ -20,7 +20,16 @@ class membersController extends Controller
         $data=array('member'=>$member_all);
         return view('member',$data);
     }
-    public static function Add_members(Request $request){ // Get POST
+    public function postGen(Request $request){
+        //dd($request->all());
+        $year=$request->input('year');
+        $gen_count=$request->input('gen_count');
+
+        $data= array('year'=>$year,'gen_count'=>$gen_count);
+        $add=member::addGen($data);
+
+    }
+    public function Add_members(Request $request){ // Get POST
         //$device = new Device();
         //dd($request->all());
         $first_name = $request->first_name;
@@ -31,8 +40,7 @@ class membersController extends Controller
         $email=$request->email;
         $img_url=$request->img_url;
         $year=$request->year;
-        DB::table('members')->insert([
-            [
+        $data=array(
                 'first_name'=>$first_name,
                 'last_name'=>$last_name,
                 'nick_name'=>$nick_name,
@@ -41,8 +49,7 @@ class membersController extends Controller
                 'email'=>$email,
                 'img_url'=>$img_url,
                 'year'=>$year
-            ]
-        ]);
-        return '0';
+        );
+        $add=member::addMembers($data);
     }
 }

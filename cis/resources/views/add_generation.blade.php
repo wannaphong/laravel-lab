@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="card-header">ข้อมูลส่วนตัว</div>
                 <form method="POST" action="./add_generation">
-
+                @csrf
                 <div class="card-body">
 
 

@@ -26,3 +26,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/member', 'membersController@getMember');
 Route::get('/view_member/{id}', 'membersController@getView_member');
 Route::post('add_member', 'membersController@Add_members');
+Route::post('add_generation', 'membersController@postGen');

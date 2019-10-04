@@ -21,5 +21,10 @@ class Members extends Model
         ->where('member_id',$id)
         ->get();
     }
-
+    public static function addGen($data){
+        return DB::table('generation')->insert($data);
+    }
+    public static function addMembers($data){
+        return DB::table('members')->insert($data);
+    }
 }

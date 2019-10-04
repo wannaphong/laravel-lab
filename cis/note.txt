@@ -1,0 +1,8 @@
+composer create-project --prefer-dist laravel/laravel cis "5.6.*"
+cd cis
+php artisan make:controller membersController
+php artisan make:model Members
+php artisan make:auth
+
+
+เวลาต้องการ POST ดูตาม add_member อย่าลืม ใส่ @csrf หลัง <form action="./add_member" class="was-validated" method="post"> ไม่เช่นนั้นจะไม่ทำงาน
