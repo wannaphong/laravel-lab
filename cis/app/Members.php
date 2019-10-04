@@ -16,4 +16,10 @@ class Members extends Model
         ->where('gender','หญิง')
         ->get();
     }
+    public static function getM($id){
+        return DB::table('members')
+        ->where('member_id',$id)
+        ->get();
+    }
+
 }
