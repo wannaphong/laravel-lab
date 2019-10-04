@@ -21,7 +21,8 @@ class membersController extends Controller
         return view('member',$data);
     }
     public static function Add_members(Request $request){ // Get POST
-        dd($request->all());
+        //$device = new Device();
+        //dd($request->all());
         $first_name = $request->first_name;
         $last_name=$request->last_name;
         $nick_name=$request->nick_name;
@@ -30,7 +31,7 @@ class membersController extends Controller
         $email=$request->email;
         $img_url=$request->img_url;
         $year=$request->year;
-       /* DB::table('members')->insert([
+        DB::table('members')->insert([
             [
                 'first_name'=>$first_name,
                 'last_name'=>$last_name,
@@ -41,7 +42,7 @@ class membersController extends Controller
                 'img_url'=>$img_url,
                 'year'=>$year
             ]
-        ]);*/
+        ]);
         return '0';
     }
 }

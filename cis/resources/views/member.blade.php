@@ -27,6 +27,7 @@
             @endforeach
         </div>
         <form action="./add_member" class="was-validated" method="post">
+            @csrf
             <div class="form-group">
               <label for="first_name">first_name:</label>
               <input type="text" class="form-control" id="first_name" name="first_name" required>

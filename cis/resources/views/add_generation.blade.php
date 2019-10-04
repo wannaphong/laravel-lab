@@ -10,7 +10,7 @@
 
             <div class="card">
                 <div class="card-header">ข้อมูลส่วนตัว</div>
-                <form method="POST" action="add_generation">
+                <form method="POST" action="./add_generation">
 
                 <div class="card-body">
 
@@ -40,7 +40,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
             <div style="margin-top: 2em;"></div>
             <center><button type="submit" class="btn btn-primary">บันทึก</button></center>
