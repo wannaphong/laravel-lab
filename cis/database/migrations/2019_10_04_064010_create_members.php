@@ -14,6 +14,18 @@ class CreateMembers extends Migration
     public function up()
     {
         //
+        Schema::create('members', function (Blueprint $table) {
+            $table->bigIncrements('members_id');
+            $table->string('firs_name');
+            $table->string('last_name');
+            $table->string('nick_name');
+            $table->date('birth_day');
+            $table->string('gender');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('image_url');
+            $table->timestamps();
+        });
     }
 
     /**
