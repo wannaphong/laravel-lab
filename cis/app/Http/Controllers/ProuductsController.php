@@ -22,5 +22,13 @@ class ProuductsController extends Controller
         //dd($prouduct_name,$price,$type_id);
         $data=array('product_name'=>$prouduct_name,'price'=>$price,'type_id'=>$type_id);
         $add=Prod::addProducts($data);
+
+        return redirect("product_list");
+    }
+    public function getProuducts(){
+        $Prouduct_data=Prod::getProducts();
+        $data=array('products'=>$Prouduct_data);
+        //dd($data);
+        return view('product_list',$data);
     }
 }

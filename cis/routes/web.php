@@ -30,5 +30,6 @@ Route::get('/view_y/{id}', 'membersController@getView_year');
 Route::post('add_member', 'membersController@Add_members');
 Route::post('add_generation', 'membersController@postGen');
 
-Route::get('add_product','ProuducsController@getForm');
+Route::get('add_product','ProuductsController@getForm');
 Route::post('add','ProuductsController@postForm'); // Route:post ใช้รับข้อมูลแบบ post
+Route::get('product_list','ProuductsController@getProuducts');

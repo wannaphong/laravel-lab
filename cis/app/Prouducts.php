@@ -11,6 +11,11 @@ class Prouducts extends Model
         return DB::table('type')
             ->get();
     }
+    public static function getProducts(){
+        return DB::table('products')
+        ->join('type','type.type_id','products.type_id') // เอา type.type_id มาเปรียบเทียบกับ products.type_id
+            ->get();
+    }
     public static function addProducts($data){
         return DB::table('products')->insert($data);
     }
