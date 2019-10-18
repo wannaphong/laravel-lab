@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/', 'membersController@index2');
 
 Auth::routes();
 
@@ -25,5 +26,6 @@ Route::get('form_generation', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/member', 'membersController@getMember');
 Route::get('/view_member/{id}', 'membersController@getView_member');
+Route::get('/view_y/{id}', 'membersController@getView_year');
 Route::post('add_member', 'membersController@Add_members');
 Route::post('add_generation', 'membersController@postGen');

@@ -16,6 +16,14 @@ class Members extends Model
         ->where('gender','หญิง')
         ->get();
     }
+    public static  function getlisty(){
+        return DB::table('generation')->get();
+    }
+    public static function getyear($id){
+        return DB::table('members')
+        ->where('year',$id)
+        ->get();
+    }
     public static function getM($id){
         return DB::table('members')
         ->where('member_id',$id)

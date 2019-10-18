@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Members as member;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {

@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 class membersController extends Controller
 {
     //
+    public function index2()
+    {
+        $data1=DB::table('generation')->get();
+        $data=array('member'=>$data1);
+        return view('welcome',$data);
+    }
     public function getMember(){
         //dd("ok");
         $member_all = member::getAll();
@@ -17,6 +23,11 @@ class membersController extends Controller
     }
     public function getView_member($m_id){
         $member_all = member::getM($m_id);
+        $data=array('member'=>$member_all);
+        return view('member',$data);
+    }
+    public function getView_year($m_id){
+        $member_all = member::getyear($m_id);
         $data=array('member'=>$member_all);
         return view('member',$data);
     }
