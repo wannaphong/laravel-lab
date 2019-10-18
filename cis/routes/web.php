@@ -33,3 +33,5 @@ Route::post('add_generation', 'membersController@postGen');
 Route::get('add_product','ProuductsController@getForm');
 Route::post('add','ProuductsController@postForm'); // Route:post ใช้รับข้อมูลแบบ post
 Route::get('product_list','ProuductsController@getProuducts');
+Route::get('edit/{id}','ProuductsController@editProuducts');
+Route::post('update','ProuductsController@updateForm');

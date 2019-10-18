@@ -1,2 +1,4 @@
 php artisan make:controller ProuducsController
 php artisan make:model Prouducs
+
+ใช้ update จบ
