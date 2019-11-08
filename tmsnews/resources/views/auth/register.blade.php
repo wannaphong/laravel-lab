@@ -79,9 +79,9 @@
                             <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('level') }}</label>
 
                             <div class="col-md-6">
-                                <select class ="form-control">
+                                <select class ="form-control" name="level">
                                 <option value="admin">admin</option>
-                                <option value="user">user</option>
+                                <option value="user" selected>user</option>
 
                                 </select>
 
