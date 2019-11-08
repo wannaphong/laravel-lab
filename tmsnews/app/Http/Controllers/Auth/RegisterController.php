@@ -50,6 +50,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
+            'user_name' => 'required|string|max:255',
+            'level' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -60,11 +62,14 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\User
+     * ดึงข้อมูลจาก form ที่ส่งมา
      */
     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
+            'user_name' => $data['user_name'],
+            'level' => $data['level'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

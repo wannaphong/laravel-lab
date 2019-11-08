@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfessorTable extends Migration
+class CreateBranchTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateProfessorTable extends Migration
      */
     public function up()
     {
-        Schema::create('professor', function (Blueprint $table) {
-            $table->increments('pro_id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->integer('branch_id');
+        Schema::create('branch', function (Blueprint $table) {
+            $table->increments('branch_id');
+            $table->string('branch_name');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateProfessorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('professor');
+        Schema::dropIfExists('branch');
     }
 }
