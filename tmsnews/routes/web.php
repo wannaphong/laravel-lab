@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('professor','ProfessorController@getPro');
+Route::get('editprofessor','ProfessorController@getPro')->middleware('auth'); // ต้อง login ก่อน ถึงเข้าได้
