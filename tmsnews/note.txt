@@ -1,0 +1,9 @@
+composer create-project --prefer-dist laravel/laravel tmsnews "5.6.*"
+cd cis
+php artisan make:controller membersController
+php artisan make:model Members
+php artisan make:auth
+
+
+// สร้าง migration
+php artisan make:migration create_professor_table
